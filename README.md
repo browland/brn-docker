@@ -2,7 +2,9 @@
 
 ## Basic Setup
 
-`docker-compose up`
+Create a file called `.env` in the root of this repository which sets the value of the environment variable placeholders used in `docker-compose.yml`.
+
+Now run: `docker-compose up`
 
 Wordpress will now be running on the host on port 8000.
 
