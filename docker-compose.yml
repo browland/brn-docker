@@ -9,8 +9,8 @@ services:
      environment:
        MYSQL_DATABASE: wordpress
        MYSQL_USER: wordpress
-       MYSQL_PASSWORD: ${BRN_MYSQL_WORDPRESS_PASSWORD}
-       MYSQL_ROOT_PASSWORD: ${BRN_MYSQL_ROOT_PASSWORD}
+       MYSQL_PASSWORD: ${MYSQL_WORDPRESS_PASSWORD}
+       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
 
    wordpress:
      depends_on:
@@ -21,8 +21,8 @@ services:
      restart: always
      environment:
        WORDPRESS_DB_HOST: wordpressdb:3306
-       WORDPRESS_DB_PASSWORD: ${BRN_MYSQL_WORDPRESS_PASSWORD}
+       WORDPRESS_DB_PASSWORD: ${MYSQL_WORDPRESS_PASSWORD}
        WORDPRESS_DB_USER: wordpress
-       VIRTUAL_HOST: www.benrowland.net
+       #VIRTUAL_HOST: www.example.com
 volumes:
     wordpress_db_data:
